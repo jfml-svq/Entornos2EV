@@ -1,5 +1,7 @@
 package dominio;
 
+import java.util.Objects;
+
 public class Portatil {
 
     private String procesador;
@@ -14,6 +16,10 @@ public class Portatil {
         this.ram = ram;
         this.capacidad = capacidad;
         this.pulgadas = pulgadas;
+    }
+
+    public Portatil() {
+
     }
 
     public String getProcesador() {
@@ -60,6 +66,23 @@ public class Portatil {
     public String toString() {
         return "Procesador marca = " + procesador + " con " + herzios + " GHz"+ ", Ram de "
                 + ram + "gb, Disco duro con capacidad de "
-                + capacidad + "gb y Placa Base marca = " + pulgadas + ".";
+                + capacidad + "gb y con pantalla de " + pulgadas + " pulgadas.";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Portatil)) return false;
+        Portatil portatil = (Portatil) o;
+        return Float.compare(portatil.herzios, herzios) == 0
+                && ram == portatil.ram
+                && capacidad == portatil.capacidad
+                && pulgadas == portatil.pulgadas
+                && procesador.equals(portatil.procesador);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(procesador, herzios, ram, capacidad, pulgadas);
     }
 }
