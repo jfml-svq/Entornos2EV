@@ -44,7 +44,7 @@ public class Sistema {
                     break;
                 case "4":
                     System.out.println("Sobremesas introducidos:\n");
-                    crearSobremesa.mostrarCoches();
+                    crearSobremesa.mostrarSobremesa();
                     break;
                 case "5":
                     break;

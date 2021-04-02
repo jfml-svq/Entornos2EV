@@ -35,7 +35,7 @@ public class CrearSobremesa {
 
         //lectura de N sobremesas
         for (i = 1; i <= N; i++) {
-            //leer datos de cada coche
+            //leer datos de cada sobremesa
             System.out.println("Sobremesa " + i);
             System.out.print("Procesador: ");
             procesador = entrada.nextLine();
@@ -51,7 +51,7 @@ public class CrearSobremesa {
 
             /*entrada.nextLine(); //limpiar el intro*/
 
-            datos = new Sobremesa(); //Se crea un objeto Coche y se asigna su referencia a datos
+            datos = new Sobremesa(); //Se crea un objeto sobremesa y se asigna su referencia a datos
 
             //se asignan valores a los atributos del nuevo objeto
             datos.setProcesador(procesador);
@@ -66,7 +66,7 @@ public class CrearSobremesa {
     } //fin método CrearSobremesa()
 
 
-    public static void mostrarCoches(){
+    public static void mostrarSobremesa(){
         System.out.println("Sobremesa/s creado/s:");
         for(int i = 0; i< sobremesas.size(); i++)
             System.out.println(sobremesas.get(i));  //se invoca el método toString de la clase Sobremesa
