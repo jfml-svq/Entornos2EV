@@ -1,7 +1,14 @@
 # Entornos2EV
-Aplicacion -  Entornos 2 Evaluacion - Integracion Continua
+
+###Aplicacion -  Entornos 2 Evaluacion - Integracion Continua
+
+#### Jose Francisco Martinez Ledesma
+
 
 - Creado el repositorio
 - Creados el usuario master y usuario develop
-- Creado el archivo README.md
--
+- Creacion y actualizacion del archivo README.md
+- Creadas las clases de dominio
+- Creadas las clases de contruccion para las anteriores
+- Creadas las clases para lanzar la aplicacion
+- Creado el fichero para sonarQube

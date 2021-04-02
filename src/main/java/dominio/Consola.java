@@ -12,6 +12,10 @@ public class Consola extends ComponentesDefault {
         this.stick = stick;
     }
 
+    public Consola() {
+
+    }
+
 
     public int getPulgadas() {
         return pulgadas;
@@ -27,6 +31,14 @@ public class Consola extends ComponentesDefault {
 
     public void setStick(boolean stick) {
         this.stick = stick;
+    }
+
+    @Override
+    public String toString() {
+        return "Procesador marca = " + procesador + " con " + herzios + " GHz"+ ", Ram de "
+                + ram + "gb, Disco duro con capacidad de "
+                + capacidad + "gb, con pantalla de " + pulgadas + " pulgadas " +
+                " y stick ." + stick ;
     }
 }
 

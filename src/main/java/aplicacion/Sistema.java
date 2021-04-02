@@ -40,6 +40,7 @@ public class Sistema {
                     crearPortatil.leerPortatiles();
                     break;
                 case "3":
+                    crearConsola.leerConsolas();
                     break;
                 case "4":
                     System.out.println("Sobremesas introducidos:\n");
@@ -49,6 +50,7 @@ public class Sistema {
                     crearPortatil.mostrarPortatiles();
                     break;
                 case "6":
+                    crearConsola.mostrarConsolas();
                     break;
                 default:
                     System.out.println("No existe esta opcion");

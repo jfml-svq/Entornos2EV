@@ -1,7 +1,6 @@
 package constructores;
 
 import dominio.Portatil;
-import dominio.Sobremesa;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -64,12 +63,12 @@ public class CrearPortatil {
             //se añade el objeto al final del array
             portatiles.add(datos);
         }
-    } //fin método CrearSobremesa()
+    } //fin método CrearPortatil()
 
 
     public static void mostrarPortatiles(){
-        System.out.println("Sobremesa/s creado/s:");
+        System.out.println("Portatil/es creado/s:");
         for(int i = 0; i< portatiles.size(); i++)
-            System.out.println(portatiles.get(i));  //se invoca el método toString de la clase Sobremesa
+            System.out.println(portatiles.get(i));  //se invoca el método toString de la clase portatil
     }
 }
