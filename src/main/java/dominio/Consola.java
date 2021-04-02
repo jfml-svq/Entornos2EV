@@ -1,54 +1,17 @@
 package dominio;
 
-public class Consola {
+public class Consola extends ComponentesDefault {
 
-    private String procesador;
-    private float herzios;
-    private int ram;
-    private int capacidad;
+
     private int pulgadas;
     private boolean stick;
 
     public Consola(String procesador, float herzios, int ram, int capacidad, int pulgadas, boolean stick) {
-        this.procesador = procesador;
-        this.herzios = herzios;
-        this.ram = ram;
-        this.capacidad = capacidad;
+        super(procesador, herzios, ram, capacidad);
         this.pulgadas = pulgadas;
         this.stick = stick;
     }
 
-    public String getProcesador() {
-        return procesador;
-    }
-
-    public void setProcesador(String procesador) {
-        this.procesador = procesador;
-    }
-
-    public float getHerzios() {
-        return herzios;
-    }
-
-    public void setHerzios(float herzios) {
-        this.herzios = herzios;
-    }
-
-    public int getRam() {
-        return ram;
-    }
-
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
 
     public int getPulgadas() {
         return pulgadas;
