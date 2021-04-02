@@ -35,10 +35,9 @@ public class Sistema {
                     break;
                 case "1":
                     crearSobremesa.leerSobremesas();
-
                     break;
                 case "2":
-
+                    crearPortatil.leerPortatiles();
                     break;
                 case "3":
                     break;
@@ -47,6 +46,7 @@ public class Sistema {
                     crearSobremesa.mostrarSobremesa();
                     break;
                 case "5":
+                    crearPortatil.mostrarPortatiles();
                     break;
                 case "6":
                     break;
