@@ -9,9 +9,9 @@ import java.util.Scanner;
 public class Sistema {
 
 
-    private CrearConsola crearConsola;
-    private CrearPortatil crearPortatil;
-    private CrearSobremesa crearSobremesa;
+    protected CrearConsola crearConsola;
+    protected CrearPortatil crearPortatil;
+    protected CrearSobremesa crearSobremesa;
     private boolean salir = false;
     private Scanner entrada = new Scanner(System.in);
     private String selector;
