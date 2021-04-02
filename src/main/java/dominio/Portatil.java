@@ -55,4 +55,11 @@ public class Portatil {
     public void setPulgadas(int pulgadas) {
         this.pulgadas = pulgadas;
     }
+
+    @Override
+    public String toString() {
+        return "Procesador marca = " + procesador + " con " + herzios + " GHz"+ ", Ram de "
+                + ram + "gb, Disco duro con capacidad de "
+                + capacidad + "gb y Placa Base marca = " + pulgadas + ".";
+    }
 }

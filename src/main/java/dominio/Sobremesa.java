@@ -16,6 +16,11 @@ public class Sobremesa {
         this.placaBase = placaBase;
     }
 
+
+    public Sobremesa(){
+    }
+
+
     public String getProcesador() {
         return procesador;
     }
@@ -56,5 +61,32 @@ public class Sobremesa {
         this.placaBase = placaBase;
     }
 
+
+    @Override
+    public String toString() {
+        return "Procesador marca = " + procesador + " con " + herzios + " GHz"+ ", Ram de "
+                + ram + "gb, Disco duro con capacidad de "
+                + capacidad + "gb y Placa Base marca = " + placaBase + ".";
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        return true;
+    }
 
 }
