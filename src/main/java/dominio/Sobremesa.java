@@ -1,57 +1,21 @@
 package dominio;
 
-public class Sobremesa {
+public class Sobremesa extends ComponentesDefault {
 
-    private String procesador;
-    private float herzios;
-    private int ram;
-    private int capacidad;
+
     private String placaBase;
 
     public Sobremesa(String procesador, float herzios, int ram, int capacidad, String placaBase) {
-        this.procesador = procesador;
-        this.herzios = herzios;
-        this.ram = ram;
-        this.capacidad = capacidad;
+
+        super(procesador, herzios, ram, capacidad);
         this.placaBase = placaBase;
     }
 
 
     public Sobremesa(){
+        super();
     }
 
-
-    public String getProcesador() {
-        return procesador;
-    }
-
-    public void setProcesador(String procesador) {
-        this.procesador = procesador;
-    }
-
-    public float getHerzios() {
-        return herzios;
-    }
-
-    public void setHerzios(float herzios) {
-        this.herzios = herzios;
-    }
-
-    public int getRam() {
-        return ram;
-    }
-
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
 
     public String getPlacaBase() {
         return placaBase;
@@ -69,11 +33,6 @@ public class Sobremesa {
                 + capacidad + "gb y Placa Base marca = " + placaBase + ".";
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        return hash;
-    }
 
     @Override
     public boolean equals(Object obj) {
@@ -83,10 +42,7 @@ public class Sobremesa {
         if (obj == null) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        return true;
+        return getClass() == obj.getClass();
     }
 
 }

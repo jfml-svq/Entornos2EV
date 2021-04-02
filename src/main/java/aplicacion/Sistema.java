@@ -35,20 +35,22 @@ public class Sistema {
                     break;
                 case "1":
                     crearSobremesa.leerSobremesas();
-
                     break;
                 case "2":
-
+                    crearPortatil.leerPortatiles();
                     break;
                 case "3":
+                    crearConsola.leerConsolas();
                     break;
                 case "4":
                     System.out.println("Sobremesas introducidos:\n");
-                    crearSobremesa.mostrarCoches();
+                    crearSobremesa.mostrarSobremesa();
                     break;
                 case "5":
+                    crearPortatil.mostrarPortatiles();
                     break;
                 case "6":
+                    crearConsola.mostrarConsolas();
                     break;
                 default:
                     System.out.println("No existe esta opcion");
