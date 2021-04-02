@@ -13,3 +13,5 @@
 - Creadas las clases para lanzar la aplicacion
 - Creado el fichero para sonarQube
 - Añadido codigo para generar sonarQube desde maven
+- Añadido codigo para JUnit en el pom 
+- Añadida clase para test con test del contructor y del equals
