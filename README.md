@@ -1,6 +1,6 @@
 # Entornos2EV
 
-###Aplicacion -  Entornos 2 Evaluacion - Integracion Continua
+### Aplicacion -  Entornos 2 Evaluacion - Integracion Continua
 
 #### Jose Francisco Martinez Ledesma
 
@@ -12,3 +12,4 @@
 - Creadas las clases de contruccion para las anteriores
 - Creadas las clases para lanzar la aplicacion
 - Creado el fichero para sonarQube
+- Añadido codigo para generar sonarQube desde maven
