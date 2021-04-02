@@ -60,8 +60,5 @@ public class Sistema {
     public void salir(){
         this.salir = true;
     }
-
-
-
 }
 
