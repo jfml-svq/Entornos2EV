@@ -2,7 +2,6 @@ package dominio;
 
 public class Sobremesa {
 
-
     private String procesador;
     private float herzios;
     private int ram;
@@ -17,8 +16,10 @@ public class Sobremesa {
         this.placaBase = placaBase;
     }
 
+
     public Sobremesa(){
     }
+
 
     public String getProcesador() {
         return procesador;
@@ -60,6 +61,7 @@ public class Sobremesa {
         this.placaBase = placaBase;
     }
 
+
     @Override
     public String toString() {
         return "Procesador marca = " + procesador + " con " + herzios + " GHz"+ ", Ram de "
@@ -86,4 +88,5 @@ public class Sobremesa {
         }
         return true;
     }
+
 }
