@@ -1,5 +1,7 @@
 package dominio;
 
+import java.util.Objects;
+
 public class Sobremesa extends ComponentesDefault {
 
 
@@ -33,16 +35,20 @@ public class Sobremesa extends ComponentesDefault {
                 + capacidad + "gb y Placa Base marca = " + placaBase + ".";
     }
 
-
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        return getClass() == obj.getClass();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Sobremesa)) return false;
+        Sobremesa sobremesa = (Sobremesa) o;
+        return Float.compare(sobremesa.herzios, herzios) == 0
+                && ram == sobremesa.ram
+                && capacidad == sobremesa.capacidad
+                && placaBase == sobremesa.placaBase
+                && procesador.equals(sobremesa.procesador);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(procesador, herzios, ram, capacidad, placaBase);
+    }
 }

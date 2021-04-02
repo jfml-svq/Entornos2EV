@@ -2,7 +2,7 @@ package constructores;
 
 import dominio.Consola;
 
-import javax.xml.bind.SchemaOutputResolver;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

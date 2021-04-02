@@ -1,5 +1,7 @@
 package dominio;
 
+import java.util.Objects;
+
 public class Consola extends ComponentesDefault {
 
 
@@ -39,6 +41,24 @@ public class Consola extends ComponentesDefault {
                 + ram + "gb, Disco duro con capacidad de "
                 + capacidad + "gb, con pantalla de " + pulgadas + " pulgadas " +
                 " y stick ." + stick ;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Consola)) return false;
+        Consola consola = (Consola) o;
+        return Float.compare(consola.herzios, herzios) == 0
+                && ram == consola.ram
+                && capacidad == consola.capacidad
+                && pulgadas == consola.pulgadas
+                && stick == consola.stick
+                && procesador.equals(consola.procesador);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(procesador, herzios, ram, capacidad, pulgadas, stick);
     }
 }
 
