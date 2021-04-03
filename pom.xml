@@ -4,11 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.josefco.entornos</groupId>
+    <groupId>com.josefco</groupId>
     <artifactId>Entornos2EV</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
@@ -16,12 +17,12 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!---PLUGIN PARA SONARQUBE-->
+                <!---PLUGIN PARA SONARQUBE
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>3.8.0.2131</version>
-                </plugin>
+                </plugin>-->
 
                 <!---PLUGIN PARA JUNIT-->
                 <plugin>
@@ -31,6 +32,42 @@
                 <plugin>
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.22.2</version>
+                </plugin>
+
+                <!---PLUGIN PARA COMPILAR EN JAVA-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+
+                <!---PLUGIN PARA CREAR UN JAR-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                            <configuration>
+                                <archive>
+                                    <manifest>
+                                        <mainClass>com.josefco.principal.Aplicacion</mainClass>
+                                    </manifest>
+                                </archive>
+                                <descriptorRefs>
+                                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                                </descriptorRefs>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -55,6 +92,12 @@
             <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
+        <!---PLUGIN PARA JUNIT
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+        </dependency>-->
     </dependencies>
 
 </project>

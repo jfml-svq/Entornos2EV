@@ -1,4 +1,4 @@
-package aplicacion;
+package com.josefco.principal;
 
 public class Aplicacion {
     public static void main(String[] args) {
