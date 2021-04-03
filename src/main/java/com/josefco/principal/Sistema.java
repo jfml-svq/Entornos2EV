@@ -1,4 +1,4 @@
-package aplicacion;
+package com.josefco.principal;
 
 import constructores.CrearConsola;
 import constructores.CrearPortatil;
